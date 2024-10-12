@@ -1,1 +1,90 @@
-body{color:="red"}
+body{color:="red"
+  font: 1em/1.2 Helvetica;
+  margin: 1em 2em;
+}
+
+.b-button {
+  will-change: transform;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  padding: .5em 1em;
+  background-color: rgba(0, 255, 0, .5);
+  border-radius: .5em;
+  margin: 1em;
+  user-select: none;
+}
+
+.b-popup {
+  width: 10em;
+  height: 10em;
+  background-color: blue;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -5em 0 0 -5em;
+  visibility: hidden;
+  
+  &_show,
+  &_blink,
+  &_show-blink,
+  &_show-blink-5-colors {
+    visibility: visible;
+  } 
+  
+  &_show {
+    animation-name: show;
+    animation-duration: 1s;
+  }
+  
+  &_blink {
+    animation-name: blink;
+    animation-duration: 1s;
+  }
+  
+  &_show-blink {
+    animation-name: show, blink;
+    animation-duration: 1s, 3s;
+  }
+  
+  &_show-blink-5-colors {
+    animation-name: blink5colors;
+    animation-duration: 5s;
+  }
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes blink {
+    from {
+        background-color: blue;
+    }
+    to {
+        background-color: green;
+    }
+}
+
+@keyframes blink5colors {
+    0% {
+        background-color: blue;
+    }
+    25% {
+        background-color: green;
+    }
+    50% {
+        background-color: red;
+    }
+    75% {
+        background-color: yellow;
+    }
+    100% {
+        background-color: grey;
+    }
+}
