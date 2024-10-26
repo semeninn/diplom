@@ -2,11 +2,42 @@
   <link rel="icon" href="arhip.png">
 
 </head>
-body{color:="red"
-  font: 1em/1.2 Helvetica;
-  margin: 1em 2em;
+body {
+    /* Устанавливаем фоновое изображение */
+    background-image: url('path/to/your/image.jpg'), linear-gradient(to bottom right, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5));
+    
+    /* Устанавливаем, что изображение будет покрывать весь экран */
+    background-size: cover;
+    
+    /* Центрируем изображение */
+    background-position: center;
+    
+    /* Устанавливаем, что изображение не будет повторяться */
+    background-repeat: no-repeat;
+    
+    /* Устанавливаем отступы и убираем поля */
+    margin: 0;
+    padding: 0;
+    
+    /* Устанавливаем высоту для body, чтобы фон заполнял весь экран */
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* Центрируем содержимое по горизонтали */
+    align-items: center; /* Центрируем содержимое по вертикали */
+    color: white; /* Цвет текста */
+    font-family: Arial, sans-serif; /* Шрифт текста */
+}
 
-    background-color: lightblue; 
+h1 {
+    font-size: 3em; /* Размер заголовка */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Тень для текста */
+}
+
+p {
+    font-size: 1.5em; /* Размер текста */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Тень для текста */
+}
+ 
 
  display: flex;
     justify-content: center;
